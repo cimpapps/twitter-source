@@ -1,7 +1,8 @@
-package com.thejavacademy.twittersource.twitter.connector;
+package com.thejavacademy.twittersource.service;
 
 
 import com.thejavacademy.twittersource.kafka.TweetsProducer;
+import com.thejavacademy.twittersource.twitter.connector.TwitterClient;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 

@@ -1,6 +1,6 @@
 package com.thejavacademy.twittersource;
 
-import com.thejavacademy.twittersource.twitter.connector.TwitterService;
+import com.thejavacademy.twittersource.service.TwitterService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
