@@ -1,7 +1,7 @@
 package com.thejavacademy.twittersource.kafka;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.thejavacademy.twittersource.model.Tweet;
+import com.thejavacademy.twittersource.avro.models.Tweet;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;

@@ -1,0 +1,11 @@
+{
+    "type": "record",
+    "namespace": "com.thejavacademy.twittersource.avro.models",
+    "name": "Tweet",
+    "doc": "This is the schema for Tweet Model",
+    "fields": [
+        { "name": "id", "type": "long", "doc": ""},
+        { "name": "text", "type": "string", "doc": ""},
+        { "name": "source", "type": "string", "doc": ""}
+    ]
+}

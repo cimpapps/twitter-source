@@ -2,7 +2,7 @@ package com.thejavacademy.twittersource.kafka;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.thejavacademy.twittersource.model.Tweet;
+import com.thejavacademy.twittersource.avro.models.Tweet;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
