@@ -31,7 +31,12 @@ public class TweetsProducer {
         final Tweet tweet;
         try {
             tweet = objectMapper.readValue(message, Tweet.class);
-            ProducerRecord<String, Tweet> record = new ProducerRecord<>(topic, tweet);
+            final Tweet avroTweet = Tweet.newBuilder()
+                    .setId(tweet.getId())
+                    .setSource(tweet.getSource())
+                    .setText(tweet.getText())
+                    .build();
+            ProducerRecord<String, Tweet> record = new ProducerRecord<>(topic, avroTweet);
             kafkaTemplate.send(record);
         } catch (JsonProcessingException e) {
 
