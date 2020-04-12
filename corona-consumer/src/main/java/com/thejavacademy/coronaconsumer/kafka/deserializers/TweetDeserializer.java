@@ -1,4 +1,4 @@
-package com.thejavacademy.twittersource.serializers;
+package com.thejavacademy.coronaconsumer.kafka.deserializers;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

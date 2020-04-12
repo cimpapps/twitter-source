@@ -1,10 +1,7 @@
-package com.thejavacademy.twittersource.kafka;
+package com.thejavacademy.coronaconsumer.kafka;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thejavacademy.twittersource.avro.models.Tweet;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.support.KafkaHeaders;
-import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.thejavacademy.twittersource.serializers;
+package com.thejavacademy.twitterproducer.serializers;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thejavacademy.twittersource.avro.models.Tweet;
 import org.apache.kafka.common.header.Headers;
 import org.apache.kafka.common.serialization.Serializer;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
 
