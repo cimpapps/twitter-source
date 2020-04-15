@@ -27,22 +27,9 @@ public class TweetsProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void publishCoronaTweets(String message) {
-        final Tweet tweet;
-        try {
-            tweet = objectMapper.readValue(message, Tweet.class);
-            final Tweet avroTweet = Tweet.newBuilder()
-                    .setId(tweet.getId())
-                    .setSource(tweet.getSource())
-                    .setText(tweet.getText())
-                    .build();
-            ProducerRecord<String, Tweet> record = new ProducerRecord<>(topic, avroTweet);
-            kafkaTemplate.send(record);
-        } catch (JsonProcessingException e) {
-
-            e.printStackTrace();
-        }
-
+    public void publishCoronaTweets(Tweet message) {
+        ProducerRecord<String, Tweet> record = new ProducerRecord<>(topic, message);
+        kafkaTemplate.send(record).addCallback(System.out::println, Throwable::printStackTrace);
     }
 
 }
